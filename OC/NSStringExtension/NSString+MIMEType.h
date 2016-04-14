@@ -10,5 +10,5 @@
 
 @interface NSString (MIMEType)
 -(NSString *)MIMEType;
--(NSString *)MIMETypeSynchronous;
+//-(NSString *)MIMETypeSynchronous;
 @end

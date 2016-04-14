@@ -23,18 +23,18 @@
     return (__bridge NSString *)MIMEType;
 }
 
--(NSString *)MIMETypeSynchronous {
-    NSURLResponse *response = nil;
-    NSURLRequest *request;
-    NSError *error;
-    if ([self hasPrefix:@"http://"] || [self hasPrefix:@"https://"]) {
-        request = [NSURLRequest requestWithURL:[NSURL URLWithString:self]];
-//    }else if (self){
-        
-    }else {
-        request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:self]];
-    }
-    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    return response.MIMEType;
-}
+//-(NSString *)MIMETypeSynchronous {
+//    NSURLResponse *response = nil;
+//    NSURLRequest *request;
+//    NSError *error;
+//    if ([self hasPrefix:@"http://"] || [self hasPrefix:@"https://"]) {
+//        request = [NSURLRequest requestWithURL:[NSURL URLWithString:self]];
+////    }else if (self){
+//        
+//    }else {
+//        request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:self]];
+//    }
+//    [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//    return response.MIMEType;
+//}
 @end
